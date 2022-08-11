@@ -14,7 +14,7 @@ function App() {
           <div className="row">
             <div className="col-1"></div>
             <div className="col-10 fs-3 border-bottom text-center p-2">
-              Concurrency Converter
+              Currency Converter
             </div>
             <div className="col-1"></div>
           </div>
