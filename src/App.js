@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import GlobalProvider from "./context/GlobalContext";
+import CurrencyForm from "./layouts/CurrencyForm";
+import Result from "./components/Result";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      <GlobalProvider>
+        <div
+          className="App-box container border rounded-4 mt-5"
+          style={{ maxWidth: 720 }}
         >
-          Learn React
-        </a>
-      </header>
+          <div className="row">
+            <div className="col-1"></div>
+            <div className="col-10 fs-3 border-bottom text-center p-2">
+              Concurrency Converter
+            </div>
+            <div className="col-1"></div>
+          </div>
+          <div className="ps-5 pe-5">
+            <CurrencyForm />
+          </div>
+          <div className="ps-5 pe-5 mb-2">
+            <Result />
+          </div>
+        </div>
+      </GlobalProvider>
     </div>
   );
 }
