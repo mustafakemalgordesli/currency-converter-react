@@ -3,7 +3,7 @@ import { useState, useContext } from "react";
 const GlobalContext = createContext();
 
 const Provider = ({ children }) => {
-  const symbols = {
+  const [symbols] = useState({
     USD: "United States Dollar",
     EUR: "Euro",
     AED: "United Arab Emirates Dirham",
@@ -172,7 +172,7 @@ const Provider = ({ children }) => {
     ZMK: "Zambian Kwacha (pre-2013)",
     ZMW: "Zambian Kwacha",
     ZWL: "Zimbabwean Dollar",
-  };
+  });
 
   const [fromCurrency, setFromCurrency] = useState("USD");
   const [toCurrency, setToCurrency] = useState("EUR");
